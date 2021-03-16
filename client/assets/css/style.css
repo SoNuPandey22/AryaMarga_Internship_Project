@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 
 body {
  margin-right: 0px;
  overflow-x: hidden;
+ color: #33335F;
  
 }
 
@@ -29,6 +33,21 @@ header .row .col-5 {
 	margin-left: 1rem;
 }
 
+.sticky  {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  height: 20px;
+  margin-top: 0px;
+
+  }
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
 #logo {
   margin-top:10%;
 }
@@ -38,12 +57,10 @@ header .row .col-5 {
   font-weight: bold;
 }
 
-nav {
-	background-color: white !important;
-
-}
   .affix {
+    padding-top:10px;
     top: 0;
+    margin-top: 20px;
     width: 100%;
     z-index: 9999 !important;
   }
@@ -53,6 +70,7 @@ nav {
   }
 .navbar {
   margin-bottom: 0px;
+  border-bottom: 2px solid #1BABE2 !important;
 }
 
 nav ul li a{
@@ -92,14 +110,27 @@ nav ul li a{
     position: relative;
     background-color: white !important;
     margin-top: -5rem;
-    border-style: solid;
-    border-color: gray;
+    -moz-box-shadow: 0px 3px 8px rgb(100,100,100);
+    -webkit-box-shadow: 0px 3px 8px rgb(100,100,100);
+    box-shadow: 0px 3px 8px rgb(100,100,100);
+    /*box-shadow: 2px 3px 2px rgb(187,187,187);*/
     height: auto;
-    width: 800px;
+    width: 90%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 7px;
   }
+#about-box h1 {
+  font-size: 5rem;
+}
+#about-box p {
+  font-size: 3rem;
+}
 
+@media only screen and (max-width: 961px) {
+  #about-box {
+    width: 100%;
+  }
+}
 
 /*
 
@@ -132,13 +163,22 @@ section {
     display: flex;
     flex-direction: column;
 }
-ul#icon-menu li {
+ #icon-menu div i{
 	display: inline;
-	font-size: 75px;
-	margin-left: 2rem;
+	font-size: 20rem;
+  margin: 5rem 5rem 5rem 5rem;
+	
 }
+
+
+#icon-menu .item a {
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+  
+}
+
 section:nth-child(2n) {
-	 background-color: white;
+	 background-color: #FFFFFF;
 	}
     
 section:nth-child(2n+1) {
