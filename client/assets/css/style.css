@@ -72,10 +72,25 @@ header .row .col-5 {
   margin-bottom: 0px;
   border-bottom: 2px solid #1BABE2 !important;
 }
+ul.nav {
+  width: 100%;
+  padding 0px 30px 0px 30px;
+}
+
+nav ul li {
+  margin: 0 5rem 0 4rem;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #1BABE2; /* Safari */  
+  text-decoration-color: #1BABE2;
+}
+
 
 nav ul li a{
   text-transform: uppercase;
-}
+  margin: 0px 5px 0px 5px;
+  }
 
 #collapsibleNavbar ul li a {
 	font-weight: bold;
