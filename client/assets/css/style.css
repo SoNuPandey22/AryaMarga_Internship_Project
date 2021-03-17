@@ -13,6 +13,8 @@ body {
     padding-right:0 !important;
     padding-left:0 !important;
 }
+
+/*header-styling*/
 #logo-header {
 	border-radius: 50%;
 	height: 2vh;
@@ -20,25 +22,28 @@ body {
 }
 
 
-header{
+#header{
 	background-color: #1BABE2;
   height: 150px;
   position:relative;
 }
 
-header .row .col-5 {
-	color: white;
-	margin: auto;
-	margin-top: ;
-	margin-left: 1rem;
-}
-
-.sticky  {
-  position: fixed;
+.smallheader{
+  height: 11vh; 
+  background-color: #1BABE2 !important;
+  position: fixed !important;
   top: 0;
   width: 100%;
   z-index: 9999 !important;
-  height: 20px;
+}
+
+
+.sticky  {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  height: 20px !important;
   margin-top: 0px;
 
   }
@@ -68,6 +73,56 @@ header .row .col-5 {
   .affix + .container-fluid {
     padding-top: 70px;
   }
+
+/*header ending here*/
+
+
+
+.main-menu{width: 100%; height: 100%; opacity: 0; visibility: hidden;}
+.nav-open .main-menu {opacity: 1; visibility: visible; background: rgba(0, 0, 0, 0.92); }
+.main-menu .nav li a{color:#FFF; font-size: 5vh; font-weight:600; }
+.main-menu .nav li{
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+    -webkit-animation-timing-function: cubic-bezier(.45,.005,0,1);
+    -moz-animation-timing-function: cubic-bezier(.45,.005,0,1);
+    -o-animation-timing-function: cubic-bezier(.45,.005,0,1);
+    animation-timing-function: cubic-bezier(.45,.005,0,1);
+}
+.nav-open .main-menu .nav li{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform .2s,opacity .2s;
+    transition: transform .2s,opacity .2s;
+}
+.main-menu .nav li.delay-1{-webkit-transition-delay:0.1s; -moz-transition-delay:0.1s; -ms-transition-delay:0.1s; -o-transition-delay:0.1s; transition-delay:0.1s; }
+.main-menu .nav li.delay-2{-webkit-transition-delay:0.2s; -moz-transition-delay:0.2s; -ms-transition-delay:0.2s; -o-transition-delay:0.2s; transition-delay:0.2s; }
+.main-menu .nav li.delay-3{-webkit-transition-delay:0.3s; -moz-transition-delay:0.3s; -ms-transition-delay:0.3s; -o-transition-delay:0.3s; transition-delay:0.3s; }
+.main-menu .nav li.delay-4{-webkit-transition-delay:0.4s; -moz-transition-delay:0.4s; -ms-transition-delay:0.4s; -o-transition-delay:0.4s; transition-delay:0.4s; }
+.main-menu .nav li.delay-5{-webkit-transition-delay:0.5s; -moz-transition-delay:0.5s; -ms-transition-delay:0.5s; -o-transition-delay:0.5s; transition-delay:0.5s; }
+.main-menu .nav li.delay-6{-webkit-transition-delay:0.6s; -moz-transition-delay:0.6s; -ms-transition-delay:0.6s; -o-transition-delay:0.6s; transition-delay:0.6s; }
+.main-menu .nav li.delay-7{-webkit-transition-delay:0.7s; -moz-transition-delay:0.7s; -ms-transition-delay:0.7s; -o-transition-delay:0.7s; transition-delay:0.7s; }
+.main-menu .nav li.delay-8{-webkit-transition-delay:0.8s; -moz-transition-delay:0.8s; -ms-transition-delay:0.8s; -o-transition-delay:0.8s; transition-delay:0.8s; }
+.main-menu .nav li.delay-9{-webkit-transition-delay:0.9s; -moz-transition-delay:0.9s; -ms-transition-delay:0.9s; -o-transition-delay:0.9s; transition-delay:0.9s; }
+
+.nav-button{position:relative; z-index:1111; border:solid 1px #f8f8f8;  height:42px; display:block; width:50px; padding:12px; }
+.nav-button #nav-icon3{width:24px;height:22px;display:inline-block;position:relative;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:.5s ease-in-out;-moz-transition:.5s ease-in-out;-o-transition:.5s ease-in-out;transition:.5s ease-in-out;cursor:pointer;}
+.nav-button #nav-icon3 span{display:block;position:absolute;height:3px;width:100%;background:#FFFFFF;border-radius:9px;opacity:1;left:0;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:.25s ease-in-out;-moz-transition:.25s ease-in-out;-o-transition:.25s ease-in-out;transition:.25s ease-in-out}
+.nav-button #nav-icon3 span:nth-child(1){top:0}
+.nav-button #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3){top:7px}
+.nav-button #nav-icon3 span:nth-child(4){top:14px}
+.nav-open #nav-icon3 span:nth-child(1){top:9px;width:0;left:50%}
+.nav-open #nav-icon3 span:nth-child(2){-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}
+.nav-open #nav-icon3 span:nth-child(3){-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
+.nav-open #nav-icon3 span:nth-child(4){top:9px;width:0;left:50%}
+
+.flex-center{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100%}
+
+
+/*navbar syling*/
+/*
 .navbar {
   margin-bottom: 0px;
   border-bottom: 2px solid #1BABE2 !important;
@@ -101,6 +156,32 @@ nav ul li a{
   margin: 0px 5px 0px 5px;
   }
 
+#navbarSupportedContent {
+  position: relative;
+  height: 100%;
+}
+*/
+#nav-table {
+  border-bottom: 1px solid #1BABE2;
+  width: 100%; 
+  height: 50px; 
+  background-color: yellow;
+}
+
+#nav-table td a:hover{
+  text-decoration: none;
+  border-bottom: 4px solid blue;
+  bottom: 3px;
+}
+
+.head-main{
+  margin-top: 11vh;
+}
+/*copied */
+
+
+/*
+
 #collapsibleNavbar ul li a {
 	font-weight: bold;
 	line-height: 18px;
@@ -109,6 +190,57 @@ nav ul li a{
 	margin-left: 5rem;
 	margin-right: 5rem;
 }
+*/
+
+/*navbar responsiveness setting*/
+@media(max-width: 1230px){
+  #nav-table{
+   display: none !important;
+
+ }
+
+ #header {
+  display: none;
+ }
+}
+@media(min-width: 1229px) {
+  .head-main {
+    display: none !important;
+  }
+   .smallheader{
+  display: none !important;
+ }
+}
+
+/*
+
+@media only screen and (min-width: 768px) {
+  #navbarSupportedContent {
+    display: none !important;
+
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+  #nav {
+    background-color: #1BABE2 !important;
+  }
+}
+
+@media only screen and (min-width: 1231px) {
+
+}
+
+@media only screen and (min-width: 961px and max-width: 1230px) {
+
+
+}
+*/
+/*navbar end*/
+
+/*body start*/
+
 .container-top {
   position: relative;
   text-align: center;
@@ -187,6 +319,8 @@ section {
     display: flex;
     flex-direction: column;
 }
+
+/*icon stylling starts from here*/
  #icon-menu div i{
 	display: inline;
 	font-size: 20rem;

@@ -6,6 +6,7 @@ var content = document.getElementById("content");
 var sticky = header.offsetTop;
 
 function myFunction() {
+ 
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky")
     content.classList.add("hidden")
@@ -14,3 +15,9 @@ function myFunction() {
     content.classList.remove("hidden");
   }
 }
+
+$(document).ready(function(){
+  $('.nav-button').click(function(){
+	$('body').toggleClass('nav-open');
+  });
+});
