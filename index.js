@@ -30,6 +30,18 @@ app.get('/what_we_do', (req, res) => {
 	
 })
 
+app.get('/stories', (req, res) => {
+
+   return res.render('src/stories')
+	
+})
+
+app.get('/action', (req, res) => {
+
+   return res.render('src/take_action')
+	
+})
+
 
 
 
