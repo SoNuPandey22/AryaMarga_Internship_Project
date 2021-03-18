@@ -1,3 +1,9 @@
+:root {
+  --skyblue: #1BABE2; 
+  --white: #ffffff;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,7 +32,7 @@ body {
 
 
 #header{
-	background-color: #1BABE2;
+	background-color: var(--blue); 
   height: 150px;
   position:relative;
 }
@@ -38,6 +44,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 9999 !important;
+  border-bottom: 1px solid #1877C7;
 }
 
 
@@ -165,7 +172,7 @@ nav ul li a{
 }
 */
 #nav-table {
-  border-bottom: 1px solid #1BABE2;
+  border-bottom: 1px solid var(--blue); 
   width: 100%; 
   height: 50px; 
   background-color: yellow;
@@ -180,6 +187,7 @@ nav ul li a{
 .head-main{
   margin-top: 100px;
   padding-bottom: 100px;
+  background-color: ##1BABE2 !important;
 }
 /*copied */
 
@@ -259,20 +267,31 @@ main{
   text-align: center;
   width:100% !important;
 }
+.container-top img {
+  width: 100% !important;
+  height:60vh;
+}
 
 .centered {
   position: absolute;
   color: white;
-  top: 85%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.centered h2{
+  font-size: 5vw;
+  background-color: 
 }
 .centered-title {
   position: absolute;
   color: white;
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.centered-title h6 {
+  font-size: 4vw;
 }
 #about-box{
     margin: auto;
@@ -348,6 +367,41 @@ section {
   
 }
 
+/* Create two equal columns that floats next to each other */
+#column {
+  float: left;
+  width: 70%;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+#column-right {
+  float:right;
+  width: 30%;
+  height: 300px;
+
+}
+#column img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+#row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1120px) {
+  #column {
+    width: 100%;
+    height: 50vh;
+  }
+  #column-right {
+    width: 100%;
+    height: 200px;
+  }
+}
 section:nth-child(2n) {
 	 background-color: #FFFFFF;
 	}
