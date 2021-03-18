@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  overflow-x:hidden; 
+} 
 
 body {
  margin-right: 0px;
@@ -29,7 +32,7 @@ body {
 }
 
 .smallheader{
-  height: 11vh; 
+  height: 100px; 
   background-color: #1BABE2 !important;
   position: fixed !important;
   top: 0;
@@ -175,7 +178,8 @@ nav ul li a{
 }
 
 .head-main{
-  margin-top: 11vh;
+  margin-top: 100px;
+  padding-bottom: 100px;
 }
 /*copied */
 
@@ -202,8 +206,12 @@ nav ul li a{
  #header {
   display: none;
  }
+ 
 }
 @media(min-width: 1229px) {
+  main{
+    padding-top: 0px !important;
+  }
   .head-main {
     display: none !important;
   }
@@ -240,6 +248,11 @@ nav ul li a{
 /*navbar end*/
 
 /*body start*/
+
+main{
+  padding-top: 150px;
+
+}
 
 .container-top {
   position: relative;
